@@ -1,9 +1,67 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:800')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=cyrillic-ext,latin-ext')
 
-#fullscreen
+html, body, h1, h2, h3, h4, h5, h6, p, span, a, div, ul, ol
+	margin: 0
+	padding: 0
+
+h1, h2, h3, h4, h5, h6, p, span
+	font-family: Montserrat
+	font-weight: 400
+
+body
+	font-family: Montserrat
+	font-weight: 400
+	.header
 	height: 100vh
-	background: url('../img/main_bg_inverted-2.svg')
-	background-position: center center
-	background-repeat: no-repeat
-	background-size: 1664px 1040px;
-	z-index: -10	
+	min-width: 800px
+	width: 100%
+	align-items: center
+	background: url('../img/background.jpg') center center no-repeat
+	background-size: cover
+.navbar
+	height: 80px
+	min-width: 800px
+	width: 100%
+	display: flex
+	align-items: center
+	box-sizing: border-box
+	justify-content: space-between
+	position: fixed
+	background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.4))
+.logo
+	height: 58px
+.logo__image
+	height: 58px
+.menu
+	width: 400px
+	list-style-type: none
+	display: flex
+	justify-content: center
+	align-items: center
+	height: inherit
+.menu__item
+	margin-right: 40px
+	text-align: center
+	list-style-type: none
+	display: inline-block
+
+.menu__item:last-child
+	margin-right: 0px
+
+$menu__item__link: 200ms
+
+.menu__item__link
+	text-decoration: none	
+	font-family: Montserrat
+	font-size: 16px
+	text-align: center
+	color: #f6f7fb//rgba(246, 247, 251, 0.5)
+	text-shadow: 0 6px 30px rgba(0, 0, 0, 0.2)
+	transition: $menu__item__link
+
+.menu__item__link:hover
+	color: rgba(246, 247, 251, 0.5)
+	transition: $menu__item__link
+
+.menu__item__link_active
+	color: rgba(246, 247, 251, 0.5)
