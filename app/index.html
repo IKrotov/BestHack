@@ -17,17 +17,21 @@
 	  		</button>
 	  		<div class="collapse navbar-collapse" id="navbar">
 			    <ul class="navbar-nav ml-auto">
-			      <li>
+			      <li class="nav-link">
+			      	<div class="dropdown show mr-sm-2">
+		      			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Средства</a>
+		      			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+		      			    <a class="dropdown-item" href="#">Номер кошелька</a>
+		      			    <a class="dropdown-item" href="#">Баланс</a>
+		      			    <a class="dropdown-item" href="#">Колбаска</a>
+		      			</div>
+		      		</div>
+			      </li>
+			      <li class="nav-link">
+			      	<button class="btn btn-outline-success mr-sm-2 " type="submit">Пополнить</button>
+			      </li>
+			      <li class="nav-link">
 			      	<form class="form-inline">
-			      		<div class="dropdown show mr-sm-2">
-			      			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Средства</a>
-			      			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			      			    <a class="dropdown-item" href="#">Номер кошелька</a>
-			      			    <a class="dropdown-item" href="#">Баланс</a>
-			      			    <a class="dropdown-item" href="#">Колбаска</a>
-			      			</div>
-			      		</div>
-			      		<button class="btn btn-outline-success mr-sm-2 " type="submit">Пополнить</button>
 						<input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
 			    		<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Искать</button>
 			 		</form>
@@ -46,7 +50,20 @@
 					</div>
 				</div>
 				<div class="col-md-9 bg-white rounded p-3">
-					
+					<div class="row">
+						<div class="col">
+							<div id="embedded_messenger" style="height: 400px;">
+							    <header id="message_header" onclick="Botkit.toggle()">Chat</header>
+							    <iframe  id="botkit_client" src="//butter-colony.glitch.me/chat.html" height="400px"></iframe>
+							</div>
+							<script src="//butter-colony.glitch.me/embed.js"></script>
+							<script>
+							var options = {};
+							Botkit.boot(options);
+							</script>
+							<link rel="stylesheet" href="//butter-colony.glitch.me/embed.css" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
